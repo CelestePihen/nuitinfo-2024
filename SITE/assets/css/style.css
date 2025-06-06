@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inria Sans', sans-serif;
+    color: #333;
+    background-color: #f4f7f6;
+}
+
+/* Contenu */
+.web-content {
+    text-align: center;
+    padding: 8rem 1rem;
+    position: relative;
+    background: linear-gradient(#0077b6, #f4f7f6);
+}
+
+.web-content h2 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.web-content p {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    color: white;
+}
+
+.web-content button {
+    background-color: #0077b6;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.web-content button:hover {
+    background-color: #2980b9;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Cartes */
+.web-features {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0 1rem 4rem 1rem;
+    background-color: #f4f7f6;
+}
+
+.card {
+    text-align: center;
+    max-width: 300px;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    width: 80px;
+    height: 60px;
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    color: #0077b6;
+    margin-bottom: 1rem;
+}
+
+.card a {
+    text-decoration: none;
+}
+
+/* Lyreco */
+.hidden-icon {
+    position: absolute;
+    top: 100%;
+    left: 40%;
+    font-size: 3rem;
+    opacity: 0;
+    cursor: pointer;
+}
+
+@keyframes rotate-180 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.hidden-icon.rotated {
+    animation: rotate-180 0.5s linear;
+}
+
+.rotatable-image.back-rotation {
+    animation: rotate-back-180 0.5s linear;
+}
+
+@keyframes rotate-back-180 {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+.card:hover .hidden-icon {
+    opacity: 1;
+}
+
+.emoji {
+    font-size: 4rem;
+}
+
+/* Bas de page */
+footer {
+    background-color: #2c3e50;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .web-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .web-content p {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .web-content button {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .web-features {
+        flex-direction: column; /* Les cartes s'empilent sur les petits écrans */
+        gap: 1.5rem;
+    }
+
+    .card {
+        margin: 0 auto; /* Centrer les cartes */
+    }
+
+    .card h3 {
+        font-size: 1.2rem;
+    }
+
+    .emoji {
+        font-size: 3rem;
+    }
+}

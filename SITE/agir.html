@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <!-- Méta-informations -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            Nuit de l'Info - Agir
+        </title>
+        <link href='https://fonts.googleapis.com/css?family=Inria Sans' rel='stylesheet'>
+        <link rel="stylesheet" href="./assets/css/agir.css">
+        <link rel="icon" href="./assets/img/logo_iut.png" type="image/png">
+    </head>
+
+    <!-- En-tête -->
+    <header>
+        <h1>Agir pour <u>l'Océan</u></h1>
+        <p>Des actions concrètes pour préserver notre planète bleue.</p>
+    </header>
+
+    <!-- Corps -->
+    <body>
+
+        <!-- Navigation -->
+        <nav>
+            <a class="menu" href="index.html">Accueil</a>
+            <a class="menu" href="paralleles.html">Explorer les parallèles</a>
+            <a class="menu" href="podcasts.html">Écouter les podcasts</a>
+            <a class="menu" href="agir.html">Agir pour l'Océan</a>
+        </nav>
+
+        <main>
+            <!-- Tester vos connaissances -->
+            <div class="web-content">
+                <h2>Testez vos connaissances !</h2>
+                <p>
+                    Cliquez sur ce bouton pour accéder à un QCM pour pouvoir tester vos connaissances sur les Océans et sur le corps humain !</br>
+                    Après chaque question, vous aurez accès à un explicatif pour en apprendre + !
+                </p>
+            </div>
+
+            <!-- Quiz -->
+            <button class="quiz-button" id="openModal">Lancer le Quiz</button>
+
+            <div id="quizModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" id="closeModal">&times;</span>
+
+                    <h2>Quiz : Testez vos connaissances</h2>
+                    <div class="quiz-question" id="quizQuestion">
+                        Quelle est la couleur de l'Océan profond ?
+                    </div>
+                    <div class="quiz-options">
+                        <button onclick="answerQuiz('A')">A. Bleu Clair</button>
+                        <button onclick="answerQuiz('B')">B. Bleu Foncé</button>
+                        <button onclick="answerQuiz('C')">C. Vert</button>
+                        <button onclick="answerQuiz('D')">D. Transparent</button>
+                    </div>
+                    <div class="quiz-options"></div>
+                    <button id="nextButton">Question Suivante →</button>
+                    <div id="frustratingContainer" style="display: none; margin-top: 20px;">
+                        <input type="text" id="frustratingInput" placeholder="Commencez à taper ici...">
+                        <p>Essayez d'écrire quelque chose, mais attention : ça s'inverse !</p>
+                    </div> 
+                </div>
+            </div>
+
+            <!-- Agir -->
+            <h2 class="section-title">Comment pouvez-vous agir ?</h2>
+
+            <!-- Cartes-->
+            <div class="web-container">
+
+                <div class="card">
+                    <p class="emoji">♻️</p>
+                    <h3>Réduisez votre usage de plastique</h3>
+                    <p>
+                        Saviez-vous que chaque minute, l’équivalent d’un camion de plastique est déversé dans les océans ? Ces déchets
+                        mettent parfois des siècles à se décomposer et nuisent gravement à la faune marine. Préférez des alternatives
+                        durables : bouteilles réutilisables, sacs en tissu et contenants en verre. Ensemble, réduisons cette pollution
+                        mortelle pour préserver les écosystèmes.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <p class="emoji">🏖️</p>
+                    <h3>Participez à des initiatives locales</h3>
+                    <p>
+                        Nettoyages de plages, campagnes de sensibilisation, ateliers pour enfants : les initiatives locales sont
+                        essentielles pour protéger les océans et éduquer les générations futures. Impliquez-vous auprès d’associations
+                        ou créez votre propre événement dans votre région. Chaque geste compte, et les efforts collectifs multiplient
+                        l’impact.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <p class="emoji">🐟</p>
+                    <h3>Adoptez une consommation responsable</h3>
+                    <p>
+                        Nos choix alimentaires ont un impact direct sur les océans. Privilégiez des produits issus de la pêche durable
+                        et évitez les espèces surpêchées. Consultez des guides comme ceux du MSC (Marine Stewardship Council) pour
+                        choisir des poissons et fruits de mer respectueux de l’environnement. Soutenez aussi les producteurs locaux
+                        et bio pour réduire votre empreinte écologique.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <p class="emoji">🚲</p>
+                    <h3>Réduisez votre empreinte carbone</h3>
+                    <p>
+                        Les émissions de CO2 provoquent l’acidification des océans, menaçant coraux et espèces marines. Pour protéger
+                        les océans, privilégiez les déplacements à vélo ou en transports en commun, optez pour des énergies
+                        renouvelables et réduisez votre consommation de viande, dont la production génère d’importantes émissions de
+                        gaz à effet de serre. Une planète en bonne santé commence par des choix réfléchis.
+                    </p>
+                </div>
+            </div>
+
+            <div class="web-content-bis">
+                <h2>Prêt à passer à l'action ?</h2>
+                <p>
+                    Chaque petite action peut engendrer un changement significatif. Engagez-vous dès aujourd’hui pour faire une
+                    différence, et rejoignez une communauté dédiée à la préservation des océans. Ensemble, nous pouvons protéger la
+                    biodiversité marine et assurer un avenir durable.
+                </p>
+            </div>
+        </main>
+
+        <!-- JavaScript -->
+        <script src="./assets/script/qcm.js"></script>
+    </body>
+
+    <!-- Bas de page -->
+    <footer>
+        <a href="https://www.raceforwater.org/fr/mentions-legales/">Mentions légales</a>
+    </footer>
+</html>

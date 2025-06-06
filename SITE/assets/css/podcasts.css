@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corps par défaut */
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    font-family: 'Inria Sans', sans-serif;
+    line-height: 1.6;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Mode rétro gaming activé */
+body.retro-gaming {
+    background-color: #000; /* Fond noir */
+    color: #00FF00; /* Vert néon */
+    font-family: 'Press Start 2P', cursive; /* Police rétro gaming */
+}
+
+/* Bouton pour activer le mode rétro */
+#toggle-retro {
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: 2px solid white;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#toggle-retro:hover {
+    background-color: #6a994e;
+    color: white;
+}
+
+/* Bouton en mode rétro */
+body.retro-gaming #toggle-retro {
+    background-color: #000;
+    color: #FF00FF; /* Rose néon */
+    border: 2px solid #00FF00; /* Vert néon */
+}
+
+/* En-tête */
+header {
+    background: linear-gradient(#0077b6, #f4f7f6);
+    color: white;
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+header p {
+    font-size: 1.5rem;
+    color: white;
+}
+
+/* En-tête en mode rétro */
+body.retro-gaming header {
+    background: linear-gradient(90deg, #000, #5500ff, #000); /* Dégradé néon horizontal */
+    color: #00FF00; /* Vert néon */
+    border-bottom: 5px solid #FF00FF; /* Bordure rose néon */
+    text-shadow: 0px 0px 8px #00FF00, 0px 0px 10px #FF00FF; /* Éclat lumineux */
+    padding: 2rem 1rem;
+}
+
+body.retro-gaming header h1 {
+    font-size: 3rem;
+    color: #FFFF00; /* Jaune néon */
+    text-shadow: 0px 0px 8px #FFFF00, 0px 0px 15px #FF00FF; /* Éclat jaune */
+    border: 4px solid #00FF00; /* Bordure pixelisée */
+    padding: 1rem;
+    display: inline-block;
+    background-color: #000; /* Fond noir */
+}
+
+body.retro-gaming header p {
+    font-size: 1.2rem;
+    color: #FF00FF; /* Rose néon */
+    margin-top: 1rem;
+    text-shadow: 0px 0px 8px #FF00FF, 0px 0px 10px #00FFFF; /* Éclat rose et cyan */
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.web-retro {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+nav a.menu {
+    color: #333;
+    background-color: #f4f7f6;
+    text-decoration: none;
+    margin: 0 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a.menu:hover {
+    background-color: #2c3e50;
+    color: white;
+}
+
+/* Navigation en mode rétro */
+body.retro-gaming nav a.menu {
+    color: #00FFFF; /* Cyan */
+    background-color: #000; /* Fond noir */
+    border: 2px solid #FF00FF; /* Rose néon */
+}
+
+body.retro-gaming nav a.menu:hover {
+    background-color: #00FFFF; /* Cyan */
+    color: #000; /* Texte noir */
+}
+
+/* Vidéos */
+.video-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.video-container h1 {
+    color: #2c3e50;
+    margin: 2rem 0 1rem;
+    font-size: 1.6rem;
+}
+
+.video-container video, .video-container audio {
+    max-width: 100%;
+    margin: 1rem 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Vidéos en mode rétro */
+body.retro-gaming .video-container h1 {
+    color: #FF0000; /* Rouge néon */
+}
+
+body.retro-gaming .video-container video, body.retro-gaming .video-container audio {
+    border: 2px solid #FFFF00; /* Jaune néon */
+}
+
+/* Bas de page */
+footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Bas de page en mode rétro */
+body.retro-gaming footer {
+    background-color: #000; /* Fond noir */
+    color: #FFFF00; /* Texte jaune néon */
+}
+
+body.retro-gaming footer a {
+    color: #FF00FF; /* Rose néon */
+}
+
+body.retro-gaming footer a:hover {
+    color: #00FFFF; /* Cyan néon */
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    header {
+        background: #0077b6;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        background: linear-gradient(#0077b6, #f4f7f6); /* Couleurs par défaut */
+    }
+
+    nav a.menu {
+        margin: 0.5rem 0;
+        text-align: center;
+        width: 50%;
+        background-color: #ffffff; /* Bleu pour le mode normal */
+        color: #000000; /* Texte blanc */
+    }
+
+    nav a.menu:hover {
+        background-color: #4a6072; /* Bleu foncé sur hover */
+        color: #fff;
+    }
+
+    /* Mode rétro activé */
+    body.retro-gaming nav {
+        background: linear-gradient(90deg, #000, #5500ff); /* Dégradé violet/noir */
+    }
+
+    body.retro-gaming nav a.menu {
+        background-color: #5500ff; /* Violet néon */
+        color: #000; /* Texte noir */
+        border: 2px solid #ff00ff; /* Bordure rose néon */
+    }
+
+    body.retro-gaming nav a.menu:hover {
+        background-color: #000; /* Fond noir sur hover */
+        color: #ff00ff; /* Texte rose néon */
+    }
+
+    .video-container {
+        padding: 0 0.5rem;
+    }
+
+    .video-container h1 {
+        font-size: 1.4rem;
+    }
+
+    .video-container iframe, .video-container audio {
+        max-width: 100%;
+        margin: 1rem 0;
+    }
+
+    footer {
+        padding: 1rem;
+        font-size: 1rem;
+        background-color: #000; /* Fond noir */
+        color: #FFFF00; /* Texte jaune rétro */
+        border-top: 2px solid #f72585;
+    }
+
+    footer a {
+        font-size: 1rem;
+        color: #FFFF00; /* Lien jaune rétro */
+        text-decoration: none;
+    }
+
+    footer a:hover {
+        text-decoration: underline;
+    }
+}
+
+
